@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main_color: #ff8716;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Start sidebar */
+.sidebar-container {
+    padding: 20px;
+    background-color: #c9c7c12f;
+}
+
+
+.sidebar-container a {
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    color: black;
+}
+
+.sidebar-container a:hover {
+    background-color: #c7c2c2;
+    border-radius: 5px;
+}
+
+.sidebar-container a:not(:last-child) {
+    margin-top: 20px
+}
+
+.logo {
+    color: var(--main_color);
+    font-weight: 800;
+    text-align: center;
+}
+
+.sidebar-container a i {
+    color: #FFF;
+    background-color: var(--main_color);
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.sidebar-container a i:hover {
+    transform: scale(1.2);
+}
+
+/* End sidebar */
+
+/* Start TasksPage */
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 200px;
+    margin: auto;
+}
+
+.tasks-container .tasks-box .task {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks-container .tasks-box .task h4 {
+    display: flex;
+}
+
+.tasks-container .tasks-box .task input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+input[type="checkbox"]::before {
+    content: '✔';
+    color: var(--main_color);
+    position: absolute;
+    font-size: 20px;
+    display: none;
+    transform: scale(.8);
+    transition: 0.2s;
+}
+
+input[type="checkbox"]:checked:before {
+    display: block;
+}
+
+.tasks-container h1 {
+    margin-bottom: 20px;
+}
+
+.tasks-container a {
+    color: black;
+    display: block;
+}
+
+.tasks-container a i {
+    margin-right: 2px;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    transform: scale(.8);
+    transition: 0.3s;
+}
+
+.tasks-container a:hover {
+    color: var(--main_color)
+}
+
+.tasks-container a i:hover {
+    background-color: var(--main_color);
+    color: #FFF;
+    border-radius: 12px;
+    transform: scale(1.1);
+}
+
+
+input[type="checkbox"]:hover::before {
+    visibility: visible;
+    transform: scale(.9);
+}
+
+.tasks-container .tasks-box {
+    min-height: 700px;
+    width: 700px;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+
+.tasks-container .tasks-box .task {
+    border-bottom: 1px solid #c4c4c4;
+    max-width: 678px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.Btn-container {
+    display: flex;
+    column-gap: 4px;
+}
+
+.Btn-container button {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 2px 4px;
+    transition: 0.5s;
+    background-color: var(--main_color);
+    cursor: pointer;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.Btn-container button:hover {
+    transform: scale(1.1);
+}
+
+/* End TasksPage */
+/* Start AddTask */
+.addTask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addTask .input-box {
+    min-width: 300px;
+    min-height: 100px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.addTask .input-box input {
+    outline: none;
+    border: none;
+    width: 100%;
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    min-height: 24px;
+    text-wrap: wrap;
+}
+
+.addTask .input-box div {
+    width: 100%;
+    height: 1px;
+    background-color: #DDD;
+    position: absolute;
+    top: 60%;
+    margin: auto;
+}
+
+.addTask .input-box button {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.addTask .input-box button:hover {
+
+    opacity: 0.8;
+}
+
+.addTask .input-box button i {
+    font-size: 25px;
+    color: var(--main_color);
+    border-radius: 10px solid var(--main_color);
+}
+
+
+/* End AddTask */
